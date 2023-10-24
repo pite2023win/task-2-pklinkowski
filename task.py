@@ -5,7 +5,8 @@ class Bank():
 
     def __str__(self):
         for client in self.clients:
-            print(client)
+            info = "{}\n".format(client)
+            return info
 
     def add_client(self, client, balance = 0):
         self.clients.append(client)
@@ -23,7 +24,7 @@ class Client():
 
 
     def __str__(self):
-        print("Client: {} {}\nBalance: {}".format(first_name, surname, balance))
+        return "Client: {} {}\nBalance: {}".format(self.first_name, self.surname, self.balance)
 
     def cash_input(self, value):
         self.balance += value
@@ -71,6 +72,11 @@ if __name__ == "__main__":
         Alice.withdraw(15000)
 
         Alice.withdraw(7000)
-    
+
+        print(Bank1)
+        print(Bank2)
+
     main()
+
+
 
